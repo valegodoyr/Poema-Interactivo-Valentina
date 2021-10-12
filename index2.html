@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>3D Folded Layout | Demo 2 | Codrops</title>
+    <meta name="description" content="Me sacaste de la oscuridad" />
+    <meta name="keywords" content="3d, layout, html, css, bending, javascript, demo" />
+    <meta name="author" content="Codrops" />
+    <link rel="shortcut icon" href="favicon.ico" />
+    <link rel="stylesheet" href="https://use.typekit.net/yma3ljw.css">
+    <link rel="stylesheet" type="text/css" href="css/base.css" />
+    <link rel="stylesheet" type="text/css" href="css/full.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+    <script>
+    document.documentElement.className = "js";
+    var supportsCssVars = function() {
+        var e,
+            t = document.createElement("style");
+        return (
+            (t.innerHTML = "root: { --tmp-var: bold; }"),
+            document.head.appendChild(t),
+            (e = !!(
+                window.CSS &&
+                window.CSS.supports &&
+                window.CSS.supports("font-weight", "var(--tmp-var)")
+            )),
+            t.parentNode.removeChild(t),
+            e
+        );
+    };
+    supportsCssVars() ||
+        alert(
+            "Please view this demo in a modern browser that supports CSS Variables."
+        );
+    </script>
+</head>
+
+<body class="demo-2 loading">
+    <main>
+        <div class="message">Some message for mobile (if needed).</div>
+        <div class="frame">
+            <h1 class="frame__title">3D Folded Layout</h1>
+            <div class="frame__links">
+                <a href="http://tympanus.net/Tutorials/TextureProjection/">Previous Demo</a>
+                <a href="https://tympanus.net/codrops/?p=46441">Article</a>
+                <a href="https://github.com/Anemolo/FoldingDOM">GitHub</a>
+            </div>
+            <div class="frame__demos">
+                <a href="index.html" class="frame__demo">demo 1</a>
+                <a href="index2.html" class="frame__demo frame__demo--current">demo 2</a>
+                <a href="index3.html" class="frame__demo">demo 3</a>
+                <a href="index4.html" class="frame__demo">demo 4</a>
+                <a href="index5.html" class="frame__demo">demo 5</a>
+            </div>
+        </div>
+        <div class="content">
+            <div class="fold-content" id="base-content">
+                <!-- CONTENT INSIDE HERE -->
+                <p class="content__type">
+                   asuntos peligrosos del pasado  <br />
+                   me persiguen todavia —<br />
+                    historias que la gente no olvidó y me recuerdan todavia
+                </p>
+                <img class="content__img" src="img/creacion de adan.jpg" alt="Some image" />
+                <p class="content__type">
+                    no me va a matar una vieja herida <br />
+                    dejales que hablen mal<br />
+                    se mueran de envidia
+                </p>
+                <img class="content__img" src="img/cena.jpg" alt="Some image" />
+                <p class="content__type">
+                    yo era ateo, pero ahora creo<br />
+                    porque un milagro como tú —<br />
+                    ha tenido que bajar del cielo
+                </p>
+                <img class="content__img" src="img/otra cena.jpg" alt="Some image" />
+                <p class="content__type">
+                    me sacaste de la oscuridad<br />
+                    somos un asunto de gravedad<br />
+                     despiertas ese diablo mio que me roba toda espiritualidad
+                </p>
+                <img class="content__img" src="img/mujer.jpg" alt="Some image" />
+                <p class="content__type">
+                    lo que ellos dicen parece veneno<br />
+                    quiero gritar que te echo de menos<br />
+                    dame del agua vendita que calma mi sed.
+                </p>
+                <img class="content__img" src="img/ultima cena.jpg" alt="Some image" />
+                <p class="content__type">
+                    yo era ateo<br />
+                    pero ahora creo <br />
+                    porque un milagro como tú a tenido que bajar del cielo.
+                </p>
+            </div>
+            <div class="screen" id="fold-effect">
+                <div class="wrapper-3d">
+                    <div class="fold fold-before"></div>
+                    <div class="fold fold-center"></div>
+                    <div class="fold fold-after"></div>
+                </div>
+            </div>
+            <button class="btn-debug" id="btn-debug" style="">See Planes</button>
+        </div>
+    </main>
+    <script src="./js/imagesloaded.pkgd.min.js"></script>
+    <script src="./js/full.js"></script>
+</body>
+
+</html>

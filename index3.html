@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>3D Folded Layout | Demo 3 | Codrops</title>
+    <meta name="description" content="An experiemntal 3D layout technique for HTML elements." />
+    <meta name="keywords" content="3d, layout, html, css, bending, javascript, demo" />
+    <meta name="author" content="Codrops" />
+    <link rel="shortcut icon" href="favicon.ico" />
+    <link rel="stylesheet" href="https://use.typekit.net/yxd7izj.css">
+    <link rel="stylesheet" type="text/css" href="css/base.css" />
+    <link rel="stylesheet" type="text/css" href="css/split.css" />
+    <script>
+    document.documentElement.className = "js";
+    var supportsCssVars = function() {
+        var e,
+            t = document.createElement("style");
+        return (
+            (t.innerHTML = "root: { --tmp-var: bold; }"),
+            document.head.appendChild(t),
+            (e = !!(
+                window.CSS &&
+                window.CSS.supports &&
+                window.CSS.supports("font-weight", "var(--tmp-var)")
+            )),
+            t.parentNode.removeChild(t),
+            e
+        );
+    };
+    supportsCssVars() ||
+        alert(
+            "Please view this demo in a modern browser that supports CSS Variables."
+        );
+    </script>
+</head>
+
+<body class="demo-3 loading">
+    <main>
+        <div class="message">Some message for mobile (if needed).</div>
+        <div class="frame">
+            <h1 class="frame__title">3D Folded Layout</h1>
+            <div class="frame__links">
+                <a href="http://tympanus.net/Tutorials/TextureProjection/">Previous Demo</a>
+                <a href="https://tympanus.net/codrops/?p=46441">Article</a>
+                <a href="https://github.com/Anemolo/FoldingDOM">GitHub</a>
+            </div>
+            <div class="frame__demos">
+                <a href="index.html" class="frame__demo">demo 1</a>
+                <a href="index2.html" class="frame__demo">demo 2</a><a href="index3.html" class="frame__demo frame__demo--current">demo 3</a><a href="index4.html" class="frame__demo">demo 4</a>
+                <a href="index5.html" class="frame__demo">demo 5</a>
+            </div>
+        </div>
+        <div class="content">
+            <div class="fold-content" id="base-content">
+                <!-- CONTENT INSIDE HERE -->
+                <p class="content__type">
+                    <span class="content__type-special">ATEO</span> Este amor es como una religión
+
+                    Asuntos peligrosos del pasado me persiguen todavía
+                    Historias que la gente no olvidó y que me recuerdan cada día
+                    Sigue, que vivo aquí, no me va a matar una vieja herida
+                    Déjales que hablen mal, se mueran de envidia
+                    
+                    
+                
+                </p>
+                <img class="content__img" src="img/mujer.jpg" alt="Some image" />
+                <p class="content__type">
+                    Yo era ateo, pero ahora creo
+Porque un milagro como tú ha tenido que bajar del cielo
+Yo era ateo, pero ahora creo
+Porque un milagro como tú ha tenido que bajar del cielo
+Yo era ateo, pero ahora creo
+Porque un milagro bajó del cielo
+Yo era ateo, pero ahora creo 
+                </p>
+                <img class="content__img" src="img/creacion de adan.jpg" alt="Some image" />
+                <p class="content__type">
+                    Me sacaste de la oscuridad
+Somos un asunto 'e gravedad
+Tú despierta' ese diablo mío que me roba toda espiritualidad
+Ya no sé lo que me pasa
+Ahora nada te reemplaza
+Tu boca es como mi casa
+Lo que ellos dicen parece veneno
+Si me preguntan, yo le' diré que no lo sé
+Quiero gritar que te echo de menos
+Dame del agua bendita que calma mi sed
+
+
+
+                </p>
+                <img class="content__img" src="img/cena.jpg" alt="Some image" />
+                <p class="content__type">Canción de C tangana y Nathy Peluso, Página de Valentina Godoy <br />(October 11,2021)</p>
+            </div>
+            <div class="screen" id="fold-wrapper"></div>
+            <button class="btn-debug" id="btn-debug">See Planes</button>
+        </div>
+    </main>
+    <script src="./js/imagesloaded.pkgd.min.js"></script>
+    <script src="./js/split.js"></script>
+</body>
+
+</html>
